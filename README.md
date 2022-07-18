@@ -1,4 +1,7 @@
 # Searchable-Combobox-Lwc
+
+> **_NOTE:_**  This combobox is different from the lookup component.
+
 This a custom lightning combobox with free text in which you can pick the value from the available options or type your own value. The component's functions are very similar to the standard Subject field on the Task Object in Salesforce.
 
 ## Features
