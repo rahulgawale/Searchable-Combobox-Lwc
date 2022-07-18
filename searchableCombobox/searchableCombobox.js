@@ -1,3 +1,8 @@
+/* 
+	Author:    Rahul Gawale
+	This component is part of this GitHub Repo: https://github.com/rahulgawale/Searchable-Combobox-Lwc/
+	Created:   18.07.2022
+*/
 import {LightningElement, api, track} from "lwc";
 
 export default class InputWithDropDown extends LightningElement {
