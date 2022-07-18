@@ -1,4 +1,4 @@
-# Searchable-Combobox-Lwc
+# Searchable Combobox Lwc
 
 > **_NOTE:_**  This combobox is different from the lookup component.
 
@@ -45,3 +45,5 @@ handleChange(event) {
 	console.log(this.value);
 }
 ```
+
+Let me know your thoughts on my blog post regarding this component: [Searchable Picklist/Combobox In Lwc](https://www.forcetrails.com/2022/07/searchable-picklist-combobox-in-lwc.html)
