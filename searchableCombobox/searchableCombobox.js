@@ -9,6 +9,7 @@ export default class InputWithDropDown extends LightningElement {
 	isOpen = false;
 	highlightCounter = null;
 	_value = "";
+	hasInteracted = false;
 
 	@api messageWhenInvalid = "Please type or select a value";
 	@api required = false;
@@ -56,7 +57,7 @@ export default class InputWithDropDown extends LightningElement {
 	}
 
 	get isInvalid() {
-		return this.required && !this.value;
+		return this.required && this.hasInteracted && !this.value;
 	}
 
 	get formElementClasses() {
@@ -69,6 +70,9 @@ export default class InputWithDropDown extends LightningElement {
 
 	handleChange(event) {
 		this._value = event.target.value;
+		if (this._value) {
+			this.hasInteracted = false;
+		}
 		this.fireChange();
 	}
 
@@ -127,6 +131,9 @@ export default class InputWithDropDown extends LightningElement {
 			return;
 		}
 		this.isOpen = false;
+		if (!this._value) {
+			this.hasInteracted = true;
+		}
 
 		this.highlightCounter = null;
 		this.dispatchEvent(new CustomEvent("blur"));
